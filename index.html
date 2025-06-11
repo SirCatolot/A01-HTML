@@ -11,23 +11,21 @@
         function updateBackgroundColor() {
             const now = new Date();
             const hour = now.getHours();
-            let backgroundColor;
+            let backgroundImage;
             
             // Determine time period and background color
             if (hour >= 6 && hour < 12) {
-                backgroundColor = '#87CEEB'; // Blue
+                backgroundImage = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMorning&psig=AOvVaw3DQQ4tXQ9_h6kLPGIdvCS1&ust=1749769709115000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOiq4qO-6o0DFQAAAAAdAAAAABAE';
             } else if (hour >= 12 && hour < 18) {
-                backgroundColor = '#FFD700'; // Yellow
+                backgroundImage = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpicnbooks.com%2Fpnb%2Fword%2Fview.do%3Fid%3D10%26page%3D167&psig=AOvVaw2KFYPXKbHqkFT32FJNN6l4&ust=1749769789201000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDq58q-6o0DFQAAAAAdAAAAABAE';
             } else if (hour >= 18 && hour < 21) {
-                // Evening: 6pm - 9pm
-                backgroundColor = '#FF6347'; // Orange
+                backgroundImage = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FNight&psig=AOvVaw0RveCPfh6DR0cpfqDmUm06&ust=1749769810013000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJD89dO-6o0DFQAAAAAdAAAAABAE';
             } else {
-                // Night: 9pm - 6am
-                backgroundColor = '#191970'; // Dark Blue
+                backgroundImage = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ouinolanguages.com%2Fblog%2Fmidnight-in-french%2F&psig=AOvVaw2OZBOS5zC37MbsnGid-UMb&ust=1749769825189000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiXgdy-6o0DFQAAAAAdAAAAABAM';
             }
             
             // Apply the background color
-            document.body.style.backgroundColor = backgroundColor;
+            document.body.style.background-image = url(backgroundImage);
         }
         
         // Update immediately when page loads
