@@ -2,37 +2,61 @@
 <html>
 <head>
   <body>
+    <style>
+      body {
+          margin: 0;
+          padding: 20px;
+          min-height: 100vh;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          font-family: Arial, sans-serif;
+          color: white;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      }
+      
+      h1 {
+          font-size: 2.5em;
+          margin-bottom: 10px;
+      }
+      
+      p {
+          font-size: 1.2em;
+          margin: 10px 0;
+      }
+    </style>
   <h1>A02</h1>
     <p>Jack Waite</p>
     <p>Web Applications Programming</p>
     <p>Computer Science</p>
     <p>Hello, World!</p>
       <script>
-        function updateBackgroundColor() {
+        function updateBackgroundImage() {
             const now = new Date();
             const hour = now.getHours();
             let backgroundImage;
             
             // Determine time period and background color
             if (hour >= 6 && hour < 12) {
-                backgroundImage = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMorning&psig=AOvVaw3DQQ4tXQ9_h6kLPGIdvCS1&ust=1749769709115000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOiq4qO-6o0DFQAAAAAdAAAAABAE';
+                backgroundImage = 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Morning%2C_just_after_sunrise%2C_Namibia.jpg';
             } else if (hour >= 12 && hour < 18) {
-                backgroundImage = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpicnbooks.com%2Fpnb%2Fword%2Fview.do%3Fid%3D10%26page%3D167&psig=AOvVaw2KFYPXKbHqkFT32FJNN6l4&ust=1749769789201000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDq58q-6o0DFQAAAAAdAAAAABAE';
+                backgroundImage = 'https://media.wnyc.org/i/800/0/h/85/1/160924154.jpg';
             } else if (hour >= 18 && hour < 21) {
-                backgroundImage = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FNight&psig=AOvVaw0RveCPfh6DR0cpfqDmUm06&ust=1749769810013000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJD89dO-6o0DFQAAAAAdAAAAABAE';
+                backgroundImage = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Savault_Chapel_Under_Milky_Way_BLS.jpg/500px-Savault_Chapel_Under_Milky_Way_BLS.jpg';
             } else {
-                backgroundImage = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ouinolanguages.com%2Fblog%2Fmidnight-in-french%2F&psig=AOvVaw2OZBOS5zC37MbsnGid-UMb&ust=1749769825189000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiXgdy-6o0DFQAAAAAdAAAAABAM';
+                backgroundImage = 'https://www.ouinolanguages.com/assets/French/vocab/24/images/pic11.jpg';
             }
             
-            // Apply the background color
-            document.body.style.background-image = url(backgroundImage);
+            // Apply the background Image
+            document.body.style.backgroundImage = `url(${backgroundImage})`;
         }
         
         // Update immediately when page loads
-        updateBackgroundColor();
+        updateBackgroundImage();
         
         // Update every minute
-        setInterval(updateBackgroundColor, 60000);
+        setInterval(updateBackgroundImage, 60000);
     </script>
   </body>
 </html>
